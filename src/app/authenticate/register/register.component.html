@@ -1,0 +1,33 @@
+<div class="login-container">
+    <div class="login-image">
+        <img src="assets/6171704.jpg">
+    </div>
+    <form class="login-form" [formGroup]="registerForm">
+        <img class="logo" src="assets/logo.png">
+
+        <div class="login-title">Register</div>
+
+        <div class="input-container">
+            <app-input formControlName="firstName" [placeholder]="'First Name'" [isFormSubmitted]="isFormSubmitted"></app-input>
+        </div>
+        <div class="input-container">
+            <app-input formControlName="lastName" [placeholder]="'Last Name'" [isFormSubmitted]="isFormSubmitted"></app-input>
+        </div>
+        <div class="input-container">
+            <app-input formControlName="email" [placeholder]="'Email'" [isFormSubmitted]="isFormSubmitted"></app-input>
+        </div>
+        <div class="input-container">
+            <app-input formControlName="password" [placeholder]="'Password'" [inputType]="'password'" [isFormSubmitted]="isFormSubmitted"></app-input>
+        </div>
+        <div class="input-container">
+            <app-input formControlName="confirmPassword" [placeholder]="'Confirm Password'" [inputType]="'password'" [isFormSubmitted]="isFormSubmitted"></app-input>
+        </div>
+    
+        <!-- <button class="button" (click)="register()">Register</button> -->
+        <div class="input-container">
+            <app-button [title]="'Register'" (click)="register()"></app-button>
+        </div>
+
+        <div class="register">Already have a account? <span (click)="login()">Login</span></div>
+    </form>
+</div>

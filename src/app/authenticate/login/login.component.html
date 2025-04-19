@@ -1,0 +1,25 @@
+<div class="login-container">
+    <div class="login-image">
+        <img src="assets/6171704.jpg">
+    </div>
+    <form class="login-form" [formGroup]="loginForm">
+        <img class="logo" src="assets/logo.png">
+
+        <div class="login-title">Login</div>
+
+        <div class="input-container">
+            <app-input formControlName="email" [placeholder]="'Email'" [isFormSubmitted]="isFormSubmitted"></app-input>
+        </div>
+        <div class="input-container">
+            <app-input formControlName="password" [placeholder]="'Password'" [inputType]="'password'" [isFormSubmitted]="isFormSubmitted"></app-input>
+            <div class="forget-password">Forget Password?</div>
+        </div>
+    
+        <!-- <button class="button" (click)="login()">Login</button> -->
+        <div class="input-container">
+            <app-button [title]="'Login'" (click)="login()"></app-button>
+        </div>
+
+        <div class="register">Don't have a account? <span (click)="register()">Register</span></div>
+    </form>
+</div>

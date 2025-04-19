@@ -1,0 +1,28 @@
+.header-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E0E0E0;
+    box-shadow: 0 0 10px 0 #E0E0E0;
+}
+
+.header-container .logo img {
+    width: 100px;
+}
+
+.header-container .user-details .user-name {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFD18C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header-container .user-details .user-name:hover {
+    box-shadow: 0 0 10px 0 #FFD18C;
+}

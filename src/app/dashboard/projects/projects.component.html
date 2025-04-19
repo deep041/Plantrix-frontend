@@ -1,0 +1,19 @@
+<div class="projects-container">
+    <div class="project-title">Projects</div>
+
+    <div class="projects">
+        <div class="project" *ngFor="let project of projects">
+            <div class="project-name">{{  project.name }}</div>
+            <div class="project-description">{{  project.description }}</div>
+            <div class="project-stats">
+                <div class="project-stats-item">Modules: <span>10</span></div>
+                <div class="project-stats-item">Tasks: <span>10</span></div>
+                <div class="project-stats-item">Issues: <span>10</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="no-project-found" *ngIf="projects.length === 0">
+        No Projects Found
+    </div>
+</div>

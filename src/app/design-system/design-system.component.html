@@ -1,0 +1,8 @@
+<div class="container">
+    <form [formGroup]="inputForm">
+        <app-input [placeholder]="'New Text'" formControlName="inputValue" [isFormSubmitted]="true" [title]="'Text'"></app-input>
+
+        <app-button [title]="'Submit'"></app-button>
+    </form>
+    {{ inputForm.value | json }}
+</div>
