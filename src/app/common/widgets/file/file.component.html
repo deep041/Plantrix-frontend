@@ -1,0 +1,2 @@
+<div class="input-title" *ngIf="title">{{ title }} <span *ngIf="isRequired">*</span> </div>
+<input class="input-text" [ngClass]="{ 'input-error': isFormSubmitted && isShowError }" [type]="inputType" [(ngModel)]="value" (ngModelChange)="handleInput()" [placeholder]="placeholder + (!title && isRequired ? ' *' : '')">

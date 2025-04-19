@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { Login, LoginResponse, ProjectsListResponse, RegisterPayload, RegisterResponse } from '../../authenticate/interfaces/user.interface';
+import { AddProjectPayload, Login, LoginResponse, ProjectsListResponse, RegisterPayload, RegisterResponse } from '../../authenticate/interfaces/user.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -27,5 +27,9 @@ export class ApiService {
     // Projects
     getProjects(): Observable<ProjectsListResponse> {
         return this.http.get<ProjectsListResponse>(`${environment.apiUrl}project`);
+    }
+
+    addProject(payload: AddProjectPayload): Observable<any> {
+        return this.http.post<any>(`${environment.apiUrl}project`, payload);
     }
 }

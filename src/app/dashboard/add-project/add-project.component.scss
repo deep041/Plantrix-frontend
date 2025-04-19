@@ -1,0 +1,16 @@
+.projects-container {
+    padding: 10px;
+}
+
+.projects-container .project-title {
+    font-weight: bold;
+}
+
+.add-project-container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

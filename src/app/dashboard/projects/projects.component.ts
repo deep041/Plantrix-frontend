@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../common/services/api.service';
 import { ProjectsList, ProjectsListResponse } from '../../authenticate/interfaces/user.interface';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-projects',
@@ -15,7 +16,7 @@ export class ProjectsComponent implements OnInit {
 
     projects: ProjectsList[] = [];
 
-    constructor(private apiService: ApiService) { }
+    constructor(private apiService: ApiService, private router: Router) { }
 
     ngOnInit(): void {
         this.getProjects();
@@ -27,6 +28,10 @@ export class ProjectsComponent implements OnInit {
                 this.projects = res.data;
             }
         });
+    }
+
+    addProject() {
+        this.router.navigate(['/add-project']);
     }
 
 }

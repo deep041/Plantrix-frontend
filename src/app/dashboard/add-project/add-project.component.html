@@ -1,0 +1,12 @@
+<div class="projects-container">
+    <div class="project-title">Add Projects</div>
+
+    <form [formGroup]="addProjectForm" class="add-project-container">
+        <app-input formControlName="name" [title]="'Project Name'" [placeholder]="'Your Project Name'" [isFormSubmitted]="isFormSubmitted"></app-input>
+        <app-textarea formControlName="description" [title]="'Project Description'" [placeholder]="'Your Project Description'" [isFormSubmitted]="isFormSubmitted"></app-textarea>
+        <app-file formControlName="logo" [title]="'Logo'"></app-file>
+        <app-date formControlName="startDate" [title]="'Start Date'"></app-date>
+        <app-date formControlName="endDate" [title]="'Expected End Date'"></app-date>
+        <app-button [title]="'Add Project'" (click)="save()"></app-button>
+    </form>
+</div>

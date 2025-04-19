@@ -17,6 +17,18 @@
     transform: translate(-50%, -50%);
 }
 
+.project-title .add-project {
+    background-color: #FE654F;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 // Projects
 .projects {
     display: flex;

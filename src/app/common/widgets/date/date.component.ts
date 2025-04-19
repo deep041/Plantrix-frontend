@@ -1,34 +1,34 @@
 import { CommonModule } from '@angular/common';
-import { Component, forwardRef, Input } from '@angular/core';
-import { AbstractControl, ControlValueAccessor, FormsModule, NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidationErrors, Validator, Validators } from '@angular/forms';
+import { Component, Input, forwardRef } from '@angular/core';
+import { AbstractControl, ControlValueAccessor, FormsModule, NG_VALIDATORS, NG_VALUE_ACCESSOR, Validator, Validators } from '@angular/forms';
 
 @Component({
-    selector: 'app-input',
+    selector: 'app-date',
     standalone: true,
     imports: [FormsModule, CommonModule],
-    templateUrl: './input.component.html',
-    styleUrl: './input.component.scss',
+    templateUrl: './date.component.html',
+    styleUrl: './date.component.scss',
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
-            useExisting: forwardRef(() => InputComponent),
+            useExisting: forwardRef(() => DateComponent),
             multi: true
         },
         {
             provide: NG_VALIDATORS,
-            useExisting: forwardRef(() => InputComponent),
+            useExisting: forwardRef(() => DateComponent),
             multi: true
         }
     ]
 })
 
-export class InputComponent implements ControlValueAccessor, Validator {
+export class DateComponent implements ControlValueAccessor, Validator {
 
     @Input() title: string = '';
-    @Input() inputType: string = 'text';
     @Input() placeholder: string = '';
     @Input() isFormSubmitted: boolean = false;
-
+    
+    inputType: string = 'date';
     value: string = '';
     disabled = false;
     isRequired: boolean = false;

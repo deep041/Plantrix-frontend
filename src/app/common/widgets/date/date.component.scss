@@ -1,0 +1,32 @@
+.input-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.input-title span {
+    color: #F55A4E;
+}
+
+.input-text {
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-text:focus {
+    border-color: #FED99B;
+    box-shadow: 0 0 5px #FED99B;
+}
+
+.input-text.input-error {
+    border-color: #F55A4E;
+}
+
+.input-text.input-error:focus {
+    border-color: #F55A4E;
+    box-shadow: 0 0 5px #F55A4E;
+}

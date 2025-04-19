@@ -48,3 +48,11 @@ export interface ProjectsList {
     description: string,
     status: "active" | "inactive"
 }
+
+export interface AddProjectPayload {
+    name: string,
+    description: string,
+    logo: string,
+    startDate: string,
+    endDate: string
+}
